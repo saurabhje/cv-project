@@ -1,0 +1,40 @@
+.content{
+    width: 50vw;
+    border: solid 1px black;
+    margin: 10px 20px;
+}
+.form{
+    width: 40vw;
+    margin: 7px auto;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.inputs > div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.header{
+    text-align: center;
+    margin: 3px 0;
+}
+.inputfield{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.subbtn{
+    font-size: 15px;
+    padding: 6px;
+    border: solid 1px black;
+    color: #0e0a0a;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
