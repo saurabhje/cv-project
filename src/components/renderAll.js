@@ -6,18 +6,31 @@ const PrintAll = (props) =>{
     const {inputfields} = props;
 
     return(
-        <ul>
+        <>
             {inputfields.map((inputs)=>{
+                console.log(inputs)
                 return< React.Fragment key={inputs.id}> 
-                    <li className="elements">
+                    <span className="elements">
                         <p>
-                            {inputs.text}
+                            {inputs.firstname}
                         </p>
-                    </li>
+                        <p>
+                            {inputs.lastname}
+                        </p>
+                        <p>
+                            {inputs.address}
+                        </p>
+                        <p>
+                            {inputs.phone}
+                        </p>
+                        <p>
+                            {inputs.email}
+                        </p>
+                    </span>
                 </React.Fragment>
             })
         }
-        </ul>
+        </>
     )
 }
 export default PrintAll;

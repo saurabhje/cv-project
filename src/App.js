@@ -1,57 +1,56 @@
 import React, {Component} from "react";
 import Personal from "./components/personal";
 import Education from "./components/education";
-import style from './style/App.css';
 import uniqid from "uniqid";
+import style from './style/App.css';
 import Experience from "./components/experience";
 import PrintAll from "./components/renderAll";
 
 class App extends Component{
-  
-  constructor(){
-    super()
-
+  constructor() {
+    super();
     this.state = {
-      inputs:{
-        text: '',
+      inputs: {
         id: uniqid(),
       },
       inputfields: [],
-      editTaskId: null,
-    }
-  }
-  
-  handleChange = (e) =>{
-    this.setState({
-      inputs:{
-        text: e.target.value,
-        id:this.state.id,
-      }
-    })
+    };
   }
 
-  onSumbitbtn = (e) =>{
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState((prevState) => ({
+      inputs: {
+        ...prevState.inputs,
+        [name]: value,
+      },
+    }));
+  };
+
+  onSubmitBtn = (e) => {
     e.preventDefault();
-
-    const { inputfields, inputs } = this.state;
-
-    this.setState({
-      inputfields: inputfields.concat(inputs),
-      inputs:{
-        text: '',
+  
+    const { inputfields } = this.state;
+  
+    this.setState((prevState) => ({
+      inputfields: inputfields.concat(prevState.inputs),
+      inputs: {
         id: uniqid(),
-      }
-    })
-  }
+      },
+    }));
+  };
 
   render(){
     return (
       <>  
         <div className="content">
-            <Personal />
+            <Personal handleChange = {this.handleChange}  input = {this.state.inputs} />
             <Education />
             <Experience />
-            {/* <PrintAll /> */}
+            <button className="subbtn" type="submit" onClick={this.onSubmitBtn}>Submit</button>
+        </div>
+        <div className="rendering">
+          <PrintAll inputfields = {this.state.inputfields} />
         </div>
       </>
     );
