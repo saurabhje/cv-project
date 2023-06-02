@@ -31,11 +31,11 @@ class Education extends Component{
                     </div>
                     <div>
                     <label htmlFor="inputfield">From</label>
-                    <input name="startyear" className="inputfield" type="date"/>
+                    <input name="unistart" className="inputfield" type="date"/>
                     </div>
                     <div>
                     <label htmlFor="inputfield">To</label>
-                    <input name="endyear" className="inputfield" type="date"/>
+                    <input name="uniend" className="inputfield" type="date"/>
                     </div>
                 </div>
             </div>

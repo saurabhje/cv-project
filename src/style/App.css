@@ -1,10 +1,18 @@
-.content{
-    width: 50vw;
+.content , .rendering{
+    width: 40vw;
     border: solid 1px black;
     margin: 10px 20px;
 }
+
+.rendering{
+    padding: 25px;
+}
+#main{
+    display: flex;
+    justify-content: space-around ;
+}
 .form{
-    width: 40vw;
+    width: 30vw;
     margin: 7px auto;
 }
 .inputs{

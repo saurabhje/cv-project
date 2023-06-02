@@ -6,9 +6,8 @@ class PrintAll extends Component {
 
     render(){
         return(
-            <>
-               <h2> personal Info </h2> 
-                <p> {this.props.name} </p>
+            <> 
+                <h1 id="name"> {this.props.name}&nbsp;{this.props.lsname} </h1>
             </>
         )
     }
