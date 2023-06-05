@@ -3,9 +3,17 @@
     border: solid 1px black;
     margin: 10px 20px;
 }
+.heading{
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(225, 65, 118);
+    height: 10vh;
+}
 
 .rendering{
     padding: 25px;
+
 }
 #main{
     display: flex;

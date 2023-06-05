@@ -1,11 +1,8 @@
 import React, {Component} from "react";
 
 class Education extends Component{
-    constructor(){
-        super()
-        this.state = {
-
-        }
+    constructor(props){
+        super(props)
     }
 
     render(){
@@ -15,27 +12,27 @@ class Education extends Component{
                 <div className="inputs">
                     <div>
                         <label htmlFor="inputfield">institution Name</label>
-                        <input name="uniname" className="inputfield" type="text"/>
+                        <input name="uniname" className="inputfield" type="text" onChange={this.props.handleChange}/>
                     </div>
                     <div>
                         <label htmlFor="inputfield">City</label>
-                        <input name="unicity" className="inputfield" type="text"/>
+                        <input name="unicity" className="inputfield" type="text" onChange={this.props.handleChange}/>
                     </div>
                     <div>
                         <label htmlFor="inputfield">Degree</label>
-                        <input name="degree" className="inputfield" type="text"/>
+                        <input name="degree" className="inputfield" type="text" onChange={this.props.handleChange}/>
                     </div>
                     <div>
                         <label htmlFor="inputfield">Specialization</label>
-                        <input name="subject" className="inputfield" type="text"/>
+                        <input name="subject" className="inputfield" type="text" onChange={this.props.handleChange}/>
                     </div>
                     <div>
                     <label htmlFor="inputfield">From</label>
-                    <input name="unistart" className="inputfield" type="date"/>
+                    <input name="unistart" placeholder="dd/mm/yy" className="inputfield" type="text"onChange={this.props.handleChange}/>
                     </div>
                     <div>
                     <label htmlFor="inputfield">To</label>
-                    <input name="uniend" className="inputfield" type="date"/>
+                    <input name="uniend" placeholder="dd/mm/yy" className="inputfield" type="text" onChange={this.props.handleChange}/>
                     </div>
                 </div>
             </div>

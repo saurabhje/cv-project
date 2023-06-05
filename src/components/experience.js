@@ -2,8 +2,8 @@ import React, {Component} from "react";
 
 class Experience extends Component{
 
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
     }
 
     render(){
@@ -13,23 +13,23 @@ class Experience extends Component{
                 <div className="inputs">
                     <div>
                         <label htmlFor="inputfield">Position</label>
-                        <input name="position" className="inputfield" type="text"/>
+                        <input name="position" className="inputfield" type="text" onChange={this.props.handleChange}/>
                     </div>
                     <div> 
                         <label htmlFor="inputfield">Company Name</label>
-                        <input name="compname" className="inputfield" type="text"/>
+                        <input name="compname" className="inputfield" type="text" onChange={this.props.handleChange}/>
                     </div>
                     <div>
                         <label htmlFor="inputfield">City</label>
-                        <input name="unicity" className="inputfield" type="text"/>
+                        <input name="compcity" className="inputfield" type="text" onChange={this.props.handleChange}/>
                     </div>
                     <div>
                         <label htmlFor="inputfield">From</label>
-                        <input name="startyear" className="inputfield" type="date"/>
+                        <input name="startyear" placeholder="dd/mm/yy" className="inputfield" type="text" onChange={this.props.handleChange}/>
                     </div>
                     <div>
                         <label htmlFor="inputfield">To</label>
-                        <input name="endyear" className="inputfield" type="date"/>
+                        <input name="endyear" placeholder="dd/mm/yy" className="inputfield" type="text" onChange={this.props.handleChange}/>
                     </div>
                 </div>
             </div>

@@ -18,12 +18,15 @@ class App extends Component{
 
   handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(value)
     this.setState({
       [name]:value}
       ); 
   };
 
+  handleEdit = () =>{
+    
+
+  }
 
   onSubmitBtn = (e) => {
     e.preventDefault();
@@ -34,16 +37,25 @@ class App extends Component{
         }
       );
   };
+
+  
+
   render(){
     return (
+      <>
+      <h1 className="heading">
+        CV-CREATOR
+      </h1>
       <div id="main">
         <div className="content">
-            <Personal handleChange = {this.handleChange}  input = {this.state.inputs} />
-            <Education />
-            <Experience />
+            <Personal handleChange = {this.handleChange} />
+            <Education handleChange = {this.handleChange}/>
+            <Experience handleChange = {this.handleChange} />
+
             <button className="subbtn" type="submit" onClick={this.onSubmitBtn}>Submit</button>
         </div> 
-        <div className="rendering">{this.state.show && <PrintAll name = {this.state.firstname}
+        <div className="rendering">
+        {this.state.show && <PrintAll name = {this.state.firstname}
         lsname = {this.state.lastname}
         Address = {this.state.address}
         phone = {this.state.phone}
@@ -54,9 +66,15 @@ class App extends Component{
         unistart = {this.state.unistart}
         uniend = {this.state.uniend}
         unisub = {this.state.subject} 
+        position = {this.state.position}
+        compname = {this.state.compname}
+        compcity = {this.state.compcity}
+        startyear = {this.state.startyear}
+        endyear = {this.state.endyear}
         />}
         </div>  
       </div>
+      </>
     );
   }
 }
