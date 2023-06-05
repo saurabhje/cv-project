@@ -1,4 +1,6 @@
 import React , {Component} from "react";
+import style from "render.css";
+
 class PrintAll extends Component {
     constructor(props){
         super(props)
@@ -8,7 +10,6 @@ class PrintAll extends Component {
         return(
             <> 
                 <div className="header1"></div>
-
                 <div className="personalarea">
                     <h1 id="name"> {this.props.name}&nbsp;{this.props.lsname} </h1>
                     <p className="personalinfo">{this.props.Address}</p>

@@ -13,7 +13,7 @@
 
 .rendering{
     padding: 25px;
-
+    display: grid;
 }
 #main{
     display: flex;

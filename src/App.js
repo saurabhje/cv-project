@@ -12,6 +12,8 @@ class App extends Component{
       show:false,
       edit:null,
     };
+
+    this.handleEdit =  this.handleEdit.bind(this);
     console.log(this.state);
 
   }
@@ -24,18 +26,25 @@ class App extends Component{
   };
 
   handleEdit = () =>{
-    
-
+    this.setState({
+      edit: "value",
+    })
+    this.handleChange();
   }
 
   onSubmitBtn = (e) => {
     e.preventDefault();
-    e.target.value = ""
-    this.setState(
-      {
-        ["show"]:true
-        }
-      );
+    if(this.state.edit == null){
+      e.target.value = ""
+      this.setState(
+        {
+          ["show"]:true
+          }
+        );    
+    }
+    else{
+      this.state.edit = null;
+    }
   };
 
   
@@ -48,7 +57,7 @@ class App extends Component{
       </h1>
       <div id="main">
         <div className="content">
-            <Personal handleChange = {this.handleChange} />
+            <Personal handleChange = {this.handleChange} handleEdit = {this.handleEdit}/>
             <Education handleChange = {this.handleChange}/>
             <Experience handleChange = {this.handleChange} />
 
