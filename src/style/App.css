@@ -1,4 +1,4 @@
-.content , .rendering{
+.content {
     width: 40vw;
     border: solid 1px black;
     margin: 10px 20px;
@@ -12,9 +12,16 @@
 }
 
 .rendering{
+    width: 40vw;
+    height: 600px;
+    border: solid 1px black;
+    margin: 10px 20px;
     padding: 25px;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr ;
 }
+
 #main{
     display: flex;
     justify-content: space-around ;

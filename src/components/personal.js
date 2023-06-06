@@ -52,7 +52,7 @@ class Personal extends Component {
               <input
                 name="email"
                 className="inputfield"
-                type="email"
+                type="text"
                 onChange={this.props.handleChange}
               />
             </div>
