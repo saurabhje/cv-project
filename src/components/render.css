@@ -1,7 +1,8 @@
 .header1{
     grid-column: 1/3;
     grid-row: 1/2;
-    background-color: gray;
+    background-color: rgb(10, 10, 10);
+    color: white;
 }
 #name, .subhead{
     vertical-align: middle;
@@ -15,13 +16,9 @@
 .personalarea{
     grid-column: 1/2;
     grid-row: 2/4;
-    background-color: pink;
+    background-color: rgb(69, 69, 69);
 }
 .educationarea{
     grid-column: 2/3;
     grid-row: 2/3;
-    background-color: aqua;
-}
-.experiencearea{
-    background-color: blue;
 }

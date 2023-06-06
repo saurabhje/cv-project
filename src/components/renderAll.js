@@ -29,7 +29,7 @@ class PrintAll extends Component {
                 </div>
 
                 <div className="experiencearea">
-                    <p className="subhead" id="exphead">Experience</p>
+                    <h2 className="subhead" id="exphead">Experience</h2>
                     <p className="expinfo">{this.props.position}</p>
                     <p className="expinfo">{this.props.compname}</p>
                     <p className="expinfo">{this.props.compcity}</p>
